@@ -6,13 +6,15 @@ grass_texture = load_texture('assets/grass_block.png')
 stone_texture = load_texture('assets/stone_block.png')
 brick_texture = load_texture('assets/brick_block.png')
 dirt_texture  = load_texture('assets/dirt_block.png')
+step_texture = load_texture('assets/grass_block.png')
 sky_texture   = load_texture('assets/skybox.png')
 arm_texture   = load_texture('assets/arm_texture.png')
 punch_sound   = Audio('assets/punch_sound',loop = False, autoplay = False)
 block_pick = 1
 
-window.fps_counter.enabled = False
+window.fps_counter.enabled = True
 window.exit_button.visible = False
+window.fullscreen = True
 
 def update():
 	global block_pick
@@ -26,6 +28,16 @@ def update():
 	if held_keys['2']: block_pick = 2
 	if held_keys['3']: block_pick = 3
 	if held_keys['4']: block_pick = 4
+
+	if held_keys['f']: 
+		if block_pick == 4:
+			block_pick = 1
+			print(block_pick)
+		else:
+			block_pick += 1
+			print(block_pick)
+
+
 
 class Voxel(Button):
 	def __init__(self, position = (0,0,0), texture = grass_texture):
