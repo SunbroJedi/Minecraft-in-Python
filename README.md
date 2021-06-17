@@ -1,4 +1,5 @@
-# Minecraft-in-Python
+# SunbroCraft
+
 A modified version of clear code's "Minecraft in Python"
 
 # Controls
