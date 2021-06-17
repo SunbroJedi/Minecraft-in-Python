@@ -13,7 +13,7 @@ punch_sound   = Audio('assets/punch_sound',loop = False, autoplay = False)
 block_pick = 1
 
 window.fps_counter.enabled = True
-window.exit_button.visible = False
+window.exit_button.visible = True
 window.fullscreen = True
 
 def update():
